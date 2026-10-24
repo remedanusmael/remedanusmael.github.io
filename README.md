@@ -8,7 +8,7 @@
 
 ## 👋 About me
 
-I'm Remedan, a medical student and self-taught developer building at the intersection of medicine and technology. I've been building software since I was a kid — now I work on health technology designed for emerging healthcare systems, with a global vision.
+I'm Remedan, a medical student and self-taught developer building at the intersection of medicine and technology. I've been learning software and AI development with a dream of making valuable contributions to healthcare technology now I work on health technology designed for emerging healthcare systems, with a global vision.
 
 ## 🚀 What I'm building — Medinovance
 
