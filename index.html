@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remedan Usmael — Founder & CEO, Medinovance</title>
+<meta name="description" content="Remedan Usmael — Founder and CEO of Medinovance. Medical student and self-taught developer passionate about transforming medicine and healthcare systems through technology.">
+<meta property="og:title" content="Remedan Usmael — Founder & CEO, Medinovance">
+<meta property="og:description" content="Medical student and self-taught developer passionate about transforming medicine and healthcare systems through technology.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://medinovance.tech">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-2: #0f1f38;
+    --teal: #14b8a6;
+    --teal-soft: #5eead4;
+    --text: #e8eef6;
+    --muted: #9fb0c7;
+    --card: #122540;
+    --border: #1e3a5f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--navy);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header.hero {
+    padding: 96px 0 64px;
+    background: linear-gradient(135deg, #0a1628 0%, #0d2b3a 60%, #0a3b3f 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 13px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--teal-soft); border: 1px solid var(--teal);
+    padding: 6px 16px; border-radius: 999px; margin-bottom: 24px;
+  }
+  h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.15; margin-bottom: 12px; }
+  h1 .accent { color: var(--teal-soft); }
+  .tagline { font-size: 19px; color: var(--muted); max-width: 640px; margin-bottom: 32px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 13px 28px; border-radius: 10px; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--teal); color: #04211d; }
+  .btn-primary:hover { box-shadow: 0 8px 24px rgba(20,184,166,.35); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); background: transparent; }
+  .btn-ghost:hover { border-color: var(--teal); }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  h2 { font-size: 28px; margin-bottom: 8px; }
+  h2 .dot { color: var(--teal); }
+  .section-sub { color: var(--muted); margin-bottom: 32px; max-width: 680px; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 28px; transition: border-color .2s ease, transform .2s ease;
+  }
+  .card:hover { border-color: var(--teal); transform: translateY(-3px); }
+  .card .icon { font-size: 30px; margin-bottom: 14px; }
+  .card h3 { font-size: 19px; margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--muted); }
+  .status {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .5px;
+    padding: 4px 12px; border-radius: 999px; margin-top: 14px;
+  }
+  .live { background: rgba(20,184,166,.15); color: var(--teal-soft); border: 1px solid rgba(20,184,166,.4); }
+  .dev { background: rgba(251,191,36,.1); color: #fbbf24; border: 1px solid rgba(251,191,36,.35); }
+
+  /* Skills */
+  .skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .skill-group h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal-soft); margin-bottom: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-size: 14px; padding: 6px 14px; border-radius: 999px;
+    background: rgba(20,184,166,.08); border: 1px solid var(--border); color: var(--text);
+  }
+
+  /* Lists */
+  ul.clean { list-style: none; }
+  ul.clean li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+  ul.clean li:last-child { border-bottom: none; }
+  ul.clean li strong { color: var(--text); }
+  ul.clean li span { color: var(--muted); }
+
+  /* Connect */
+  .connect-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+  .connect-links a {
+    color: var(--text); text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 12px 22px; border: 1px solid var(--border); border-radius: 10px; background: var(--card);
+    transition: border-color .2s ease, transform .15s ease;
+  }
+  .connect-links a:hover { border-color: var(--teal); transform: translateY(-2px); }
+
+  footer { padding: 40px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
+  footer a { color: var(--teal-soft); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    header.hero { padding: 64px 0 48px; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Founder &amp; CEO — Medinovance</span>
+    <h1>Remedan <span class="accent">Usmael</span></h1>
+    <p class="tagline">Medical student and self-taught developer passionate about transforming medicine and healthcare systems through technology.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://medinovance.tech">Explore Medinovance</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/remedan-usmael-14a133407">Connect on LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>About<span class="dot">.</span></h2>
+    <p class="section-sub">
+      I'm Remedan, a medical student at Salale University (MD, expected 2030) and a self-taught developer
+      who has been building software since childhood. I work at the intersection of medicine and technology —
+      building intelligent, adaptable, and locally relevant health technology for emerging healthcare systems,
+      with a global vision. Based in Addis Ababa, Ethiopia.
+    </p>
+  </div>
+</section>
+
+<section style="background: var(--navy-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="wrap">
+    <h2>Medinovance<span class="dot">.</span></h2>
+    <p class="section-sub">An AI-powered medical knowledge ecosystem — advancing medical knowledge through technology built for emerging healthcare systems.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Medinovance Academy</h3>
+        <p>Medical education platform for learners and exam preparation — 2,800+ questions and counting.</p>
+        <span class="status live">LIVE · LIMITED BETA</span>
+      </div>
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Medinovance Care</h3>
+        <p>Clinical decision support with localized treatment guidelines and drug databases for providers in low- and middle-income countries.</p>
+        <span class="status dev">IN DEVELOPMENT</span>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>Medinovance AI</h3>
+        <p>Intelligence layer across the ecosystem — customizable to the needs of specific countries and healthcare facilities.</p>
+        <span class="status dev">IN DEVELOPMENT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Technical skills<span class="dot">.</span></h2>
+    <p class="section-sub">A self-taught stack, sharpened by shipping real products.</p>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">HTML</span>
+          <span class="tag">CSS</span><span class="tag">Java / Kotlin</span><span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks &amp; Data</h3>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">FastAPI</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <div class="tags">
+          <span class="tag">Git &amp; GitHub</span><span class="tag">VS Code</span><span class="tag">GitHub Codespaces</span>
+          <span class="tag">Azure</span><span class="tag">Appwrite</span><span class="tag">Sentry</span>
+          <span class="tag">Doppler</span><span class="tag">Notion</span><span class="tag">JetBrains</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--navy-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="wrap">
+    <h2>Education &amp; certifications<span class="dot">.</span></h2>
+    <ul class="clean">
+      <li><strong>MD Student</strong> — <span>Salale University · expected 2030</span></li>
+      <li><strong>Certificate in Digital Health Foundations</strong> — <span>ADHA · 2026</span></li>
+      <li><strong>Introduction to Generative AI</strong> — <span>Google Cloud · 2026</span></li>
+      <li><strong>Nanodegree, AI &amp; Android Development</strong> — <span>Udacity · 2025</span></li>
+      <li><strong>Nanodegree, Fundamentals of Programming &amp; Data Science</strong> — <span>Udacity · 2026</span></li>
+      <li><strong>Data Annotation certifications</strong> — <span>DataLens Africa · Elevify · 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Connect<span class="dot">.</span></h2>
+    <p class="section-sub">Fluent in English · Native Amharic · Fluent Afan Oromo</p>
+    <div class="connect-links">
+      <a href="https://medinovance.tech">🌐 medinovance.tech</a>
+      <a href="https://www.linkedin.com/in/remedan-usmael-14a133407">💼 LinkedIn</a>
+      <a href="https://www.instagram.com/medinovance">📸 @medinovance</a>
+      <a href="mailto:contact@medinovance.tech">✉️ contact@medinovance.tech</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Remedan Usmael · Built with care in Addis Ababa · <a href="https://medinovance.tech">medinovance.tech</a>
+  </div>
+</footer>
+
+</body>
+</html>
